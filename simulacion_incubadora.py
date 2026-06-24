@@ -136,7 +136,7 @@ ax.annotate(f'τ = {tau:.0f}s',(L+tau/2,T0+1),color='red')
 ax.set_xlabel('Tiempo [s]'); ax.set_ylabel('Temperatura del aire [°C]')
 ax.set_title('Curva de Reacción del Proceso (escalón 50% potencia)\nMétodo de Ziegler-Nichols')
 ax.legend(); ax.grid(alpha=0.3); ax.set_xlim(0,2500)
-fig1.tight_layout(); fig1.savefig('/home/claude/fig1_curva_reaccion.png',dpi=130)
+fig1.tight_layout(); fig1.savefig('fig1_curva_reaccion.png',dpi=130)
 
 # --- Figura B: respuesta de lazo cerrado completa ---
 fig2,axes=plt.subplots(3,1,figsize=(9,8),sharex=True)
@@ -171,6 +171,6 @@ for axx in axes:
 axes[0].annotate('Apertura\nportillo',(1530,33.5),fontsize=7,ha='center',color='darkorange',fontweight='bold')
 axes[0].annotate('Sala\n22°C',(2650,25.5),fontsize=7,ha='center',color='teal',fontweight='bold')
 axes[0].annotate('+ Evapo-\nración',(3650,25.5),fontsize=7,ha='center',color='purple',fontweight='bold')
-fig2.tight_layout(); fig2.savefig('/home/claude/fig2_lazo_cerrado.png',dpi=130)
+fig2.tight_layout(); fig2.savefig('fig2_lazo_cerrado.png',dpi=130)
 
 print("\nGraficos guardados: fig1_curva_reaccion.png, fig2_lazo_cerrado.png")
